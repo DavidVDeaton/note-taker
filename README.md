@@ -22,7 +22,8 @@ Please visit ______ for the site.
 
 # Screenshots
 
-![screenshot]
+![screenshot](images/notetaker.PNG?raw=true)
+![screenshot](images/notetaker2.PNG?raw=true)
 
 # User Guide
 
