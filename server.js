@@ -1,27 +1,21 @@
-// Dependencies
-const http = require("http");
-const fs = require("fs");
-const path = require("path");
-const express = require("express");
+// get the express module
+const express = require('express');
+const apiRoutes = require('./router/apiRoute');
+const htmlRoutes = require('./router/htmlRoute');
 
-// Tells node that we are creating an "express" server
 const app = express();
 
-// Sets an initial port
+// set the port as either assign by heroku or 8080 in local
 const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Ensuring static files, like the js and css, can be used
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
-//Setting up the location of the routes to be used
-require("routes")(app);
-require("htmlroutes")(app);
-
-
-// Starting the server
-app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+// add the port listener
+app.listen(PORT, function () {
+	console.log(`App listening on PORT:${PORT}`);
 });
