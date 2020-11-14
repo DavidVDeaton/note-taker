@@ -18,7 +18,7 @@ Note Taker
 
 This project is to bulid a note taker app which allows the user to add/read/delete notes from the apps.
 
-Please visit ![https://gentle-castle-87602.herokuapp.com](https://gentle-castle-87602.herokuapp.com) for the site.
+Please visit [https://gentle-castle-87602.herokuapp.com](https://gentle-castle-87602.herokuapp.com) for the site.
 
 # Screenshots
 
