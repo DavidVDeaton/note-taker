@@ -1,7 +1,7 @@
 // get the router module
 const router = require('express').Router();
 // get the Connector.js
-const Connector = require('../db/Connect');
+const Connector = require('../db/connect');
 
 // route to the function for getting the data from the database
 router.get('/notes', (req, res) => {
